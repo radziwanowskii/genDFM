@@ -1,0 +1,106 @@
+* using log directory ‘/Users/piotrradziwanowski/Desktop/Master Econometrics/genDFM_thesis/genDFM/genDFM.Rcheck’
+* using R version 4.3.0 (2023-04-21)
+* using platform: x86_64-apple-darwin20 (64-bit)
+* R was compiled by
+    Apple clang version 14.0.3 (clang-1403.0.22.14.1)
+    GNU Fortran (GCC) 12.2.0
+* running under: macOS 15.0.1
+* using session charset: UTF-8
+* checking for file ‘genDFM/DESCRIPTION’ ... OK
+* checking extension type ... Package
+* this is package ‘genDFM’ version ‘1.0’
+* package encoding: UTF-8
+* checking package namespace information ... OK
+* checking package dependencies ... OK
+* checking if this is a source package ... WARNING
+Subdirectory ‘genDFM/src’ contains apparent object files/libraries
+  RcppExports.o genDFM.so genDFM_functions.o
+Object files/libraries should not be included in a source package.
+* checking if there is a namespace ... OK
+* checking for executable files ... OK
+* checking for hidden files and directories ... OK
+* checking for portable file names ... OK
+* checking for sufficient/correct file permissions ... OK
+* checking whether package ‘genDFM’ can be installed ... OK
+* used C++ compiler: ‘Apple clang version 16.0.0 (clang-1600.0.26.3)’
+* used SDK: ‘MacOSX15.0.sdk’
+* checking installed package size ... OK
+* checking package directory ... OK
+* checking DESCRIPTION meta-information ... NOTE
+Checking should be performed on sources prepared by ‘R CMD build’.
+* checking top-level files ... OK
+* checking for left-over files ... OK
+* checking index information ... OK
+* checking package subdirectories ... WARNING
+Found the following directory with the name of a check directory:
+  ./genDFM.Rcheck
+Most likely, these were included erroneously.
+* checking R files for non-ASCII characters ... OK
+* checking R files for syntax errors ... OK
+* checking whether the package can be loaded ... OK
+* checking whether the package can be loaded with stated dependencies ... OK
+* checking whether the package can be unloaded cleanly ... OK
+* checking whether the namespace can be loaded with stated dependencies ... OK
+* checking whether the namespace can be unloaded cleanly ... OK
+* checking loading without being on the library search path ... OK
+* checking dependencies in R code ... NOTE
+Namespace in Imports field not imported from: ‘Rcpp’
+  All declared Imports should be used.
+* checking S3 generic/method consistency ... OK
+* checking replacement functions ... OK
+* checking foreign function calls ... OK
+* checking R code for possible problems ... NOTE
+estimate_DFM: no visible binding for global variable ‘scaled_data’
+estimate_DFM: no visible binding for global variable ‘result’
+favar_IRF: no visible global function definition for
+  ‘compute_residuals’
+favar_IRF: no visible global function definition for ‘sd’
+onatski_2009_test_r: possible error in floor(3.3 * sqrt(length(data[,
+  1])), floor(length(data[, 1])/2 - 0.1)): unused argument
+  (floor(length(data[, 1])/2 - 0.1))
+plot.DFM: no visible global function definition for
+  ‘plot_series_matrix’
+plot_IRF: no visible global function definition for ‘ggplot’
+plot_IRF: no visible global function definition for ‘geom_ribbon’
+plot_IRF: no visible global function definition for ‘aes’
+plot_IRF: no visible binding for global variable ‘x’
+plot_IRF: no visible binding for global variable ‘lower’
+plot_IRF: no visible binding for global variable ‘upper’
+plot_IRF: no visible global function definition for ‘geom_line’
+plot_IRF: no visible global function definition for ‘geom_hline’
+plot_IRF: no visible global function definition for ‘theme’
+plot_IRF: no visible global function definition for ‘element_text’
+plot_IRF: no visible global function definition for ‘labs’
+predict.DFM: no visible global function definition for ‘predict’
+Undefined global functions or variables:
+  aes compute_residuals element_text geom_hline geom_line geom_ribbon
+  ggplot labs lower plot_series_matrix predict result scaled_data sd
+  theme upper x
+Consider adding
+  importFrom("stats", "predict", "sd")
+to your NAMESPACE file.
+* checking Rd files ... OK
+* checking Rd metadata ... OK
+* checking Rd cross-references ... OK
+* checking for missing documentation entries ... OK
+* checking for code/documentation mismatches ... OK
+* checking Rd \usage sections ... OK
+* checking Rd contents ... OK
+* checking for unstated dependencies in examples ... OK
+* checking line endings in C/C++/Fortran sources/headers ... OK
+* checking compiled code ... WARNING
+File ‘genDFM/libs/genDFM.so’:
+  Found ‘__ZNSt3__14coutE’, possibly from ‘std::cout’ (C++)
+    Object: ‘genDFM_functions.o’
+  Found ‘_abort’, possibly from ‘abort’ (C)
+    Object: ‘RcppExports.o’
+
+Compiled code should not call entry points which might terminate R nor
+write to stdout/stderr instead of to the console, nor use Fortran I/O
+nor system RNGs nor [v]sprintf.
+
+See ‘Writing portable packages’ in the ‘Writing R Extensions’ manual.
+* checking examples ... OK
+* checking PDF version of manual ... OK
+* DONE
+Status: 3 WARNINGs, 3 NOTEs

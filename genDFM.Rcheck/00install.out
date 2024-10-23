@@ -1,0 +1,19 @@
+* installing *source* package ‘genDFM’ ...
+** using staged installation
+** libs
+using C++ compiler: ‘Apple clang version 16.0.0 (clang-1600.0.26.3)’
+using SDK: ‘MacOSX15.0.sdk’
+make: Nothing to be done for `all'.
+make: `symbols.rds' is up to date.
+installing to /Users/piotrradziwanowski/Desktop/Master Econometrics/genDFM_thesis/genDFM/genDFM.Rcheck/00LOCK-genDFM/00new/genDFM/libs
+** R
+** byte-compile and prepare package for lazy loading
+Note: wrong number of arguments to 'floor' 
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (genDFM)
