@@ -1,2 +1,3 @@
-PKG_CXXFLAGS = $(SHLIB_OPENMP_CXXFLAGS)
-PKG_LIBS = $(SHLIB_OPENMP_CXXFLAGS) $(LAPACK_LIBS) $(BLAS_LIBS) $(FLIBS) -larmadillo
+## Compiler and linker flags for Rcpp and RcppArmadillo
+PKG_CXXFLAGS = $(shell $(R_HOME)/bin/Rscript -e "Rcpp:::CxxFlags()") $(SHLIB_OPENMP_CXXFLAGS)
+PKG_LIBS = $(shell $(R_HOME)/bin/Rscript -e "RcppArmadillo:::LdFlags()") $(SHLIB_OPENMP_CXXFLAGS) $(LAPACK_LIBS) $(BLAS_LIBS) $(FLIBS) -larmadillo
