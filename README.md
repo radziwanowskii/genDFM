@@ -8,4 +8,4 @@ You can install the development version of genDFM from GitHub with:
 
 ```r
 # install.packages("devtools")
-devtools::install_github("radziwanowskii/genDFM")
+devtools::install_github("yourusername/genDFM")
