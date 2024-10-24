@@ -15,4 +15,4 @@ Imports: Rcpp (>= 1.0.12), dfms, fnets
 LinkingTo: Rcpp, RcppArmadillo
 Encoding: UTF-8
 RoxygenNote: 7.3.2
-Built: R 4.3.0; x86_64-apple-darwin20; 2024-10-23 23:55:11 UTC; unix
+Built: R 4.3.0; x86_64-apple-darwin20; 2024-10-24 00:47:58 UTC; unix

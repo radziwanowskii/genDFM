@@ -7,6 +7,7 @@ FAVAR	FAVAR
 favar_IRF	favar_IRF
 fnets_ic_wrapper	fnets_ic_wrapper
 genDFM	genDFM-package
+MacroPL	MacroPL
 onatski_2009_test_r	onatski_2009_test_r
 plot.DFM	plot.DFM
 plot_IRF	plot_IRF

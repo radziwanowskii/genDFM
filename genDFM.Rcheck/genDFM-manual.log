@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.9)  24 OCT 2024 01:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.9)  24 OCT 2024 02:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -334,8 +334,8 @@ File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count289
 \l__pdf_internal_box=\box57
 )
-(/private/var/folders/hq/y01m56113sd_zn02g_p_df300000gn/T/RtmpYc9SFj/Rd2pdf1af2
-1154b0f5/Rd2.aux)
+(/private/var/folders/hq/y01m56113sd_zn02g_p_df300000gn/T/RtmpC0YX16/Rd2pdf2747
+54cb76d9/Rd2.aux)
 \openout1 = `Rd2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
@@ -388,10 +388,10 @@ LaTeX Info: Redefining \ref on input line 8.
 LaTeX Info: Redefining \pageref on input line 8.
 LaTeX Info: Redefining \nameref on input line 8.
 
-(/private/var/folders/hq/y01m56113sd_zn02g_p_df300000gn/T/RtmpYc9SFj/Rd2pdf1af2
-1154b0f5/Rd2.out)
-(/private/var/folders/hq/y01m56113sd_zn02g_p_df300000gn/T/RtmpYc9SFj/Rd2pdf1af2
-1154b0f5/Rd2.out)
+(/private/var/folders/hq/y01m56113sd_zn02g_p_df300000gn/T/RtmpC0YX16/Rd2pdf2747
+54cb76d9/Rd2.out)
+(/private/var/folders/hq/y01m56113sd_zn02g_p_df300000gn/T/RtmpC0YX16/Rd2pdf2747
+54cb76d9/Rd2.out)
 \@outlinefile=\write4
 \openout4 = `Rd2.out'.
 
@@ -409,8 +409,8 @@ LaTeX Font Info:    Trying to load font information for T1+phv on input line 35
 (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
-(/private/var/folders/hq/y01m56113sd_zn02g_p_df300000gn/T/RtmpYc9SFj/Rd2pdf1af2
-1154b0f5/Rd2.toc
+(/private/var/folders/hq/y01m56113sd_zn02g_p_df300000gn/T/RtmpC0YX16/Rd2pdf2747
+54cb76d9/Rd2.toc
 LaTeX Font Info:    Trying to load font information for U+msa on input line 1.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -441,38 +441,39 @@ LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 1
 (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 ) [3] [4]
-[5] [6] [7]
+[5] [6] [7] [8] [9]
 LaTeX Font Info:    Trying to load font information for TS1+zi4 on input line 4
-30.
- (/usr/local/texlive/2022/texmf-dist/tex/latex/inconsolata/ts1zi4.fd
+98.
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/inconsolata/ts1zi4.fd
 File: ts1zi4.fd 2018/01/14 TS1/zi4 (Inconsolata)
 )
 LaTeX Font Info:    Font shape `TS1/zi4/m/n' will be
-(Font)              scaled to size 10.0pt on input line 430.
- [8]
-(/private/var/folders/hq/y01m56113sd_zn02g_p_df300000gn/T/RtmpYc9SFj/Rd2pdf1af2
-1154b0f5/Rd2.ind [9]
+(Font)              scaled to size 10.0pt on input line 498.
+ [10]
+(/private/var/folders/hq/y01m56113sd_zn02g_p_df300000gn/T/RtmpC0YX16/Rd2pdf2747
+54cb76d9/Rd2.ind [11]
 
 LaTeX Font Warning: Font shape `T1/zi4/m/it' undefined
-(Font)              using `T1/zi4/m/n' instead on input line 26.
+(Font)              using `T1/zi4/m/n' instead on input line 28.
 
-[10
+[12
 
 
 ])
-(/private/var/folders/hq/y01m56113sd_zn02g_p_df300000gn/T/RtmpYc9SFj/Rd2pdf1af2
-1154b0f5/Rd2.aux)
+(/private/var/folders/hq/y01m56113sd_zn02g_p_df300000gn/T/RtmpC0YX16/Rd2pdf2747
+54cb76d9/Rd2.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `Rd2.out' has not changed.
-(rerunfilecheck)             Checksum: 8691D018401FAC6C930BD89A97F2B02C;1798.
+(rerunfilecheck)             Checksum: AC21135022BE1981553AED8BADF0549F;1881.
  ) 
 Here is how much of TeX's memory you used:
- 10431 strings out of 478268
- 161406 string characters out of 5846348
- 450623 words of memory out of 5000000
- 28350 multiletter control sequences out of 15000+600000
+ 10441 strings out of 478268
+ 161514 string characters out of 5846348
+ 451623 words of memory out of 5000000
+ 28351 multiletter control sequences out of 15000+600000
  506305 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  77i,5n,79p,407b,512s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -486,10 +487,10 @@ texlive/2022/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive
 f-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2022/texmf-dist/fon
 ts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/u
 rw/times/utmri8a.pfb>
-Output written on Rd2.pdf (10 pages, 109979 bytes).
+Output written on Rd2.pdf (12 pages, 117133 bytes).
 PDF statistics:
- 269 PDF objects out of 1000 (max. 8388607)
- 239 compressed objects within 3 object streams
- 99 named destinations out of 1000 (max. 500000)
- 105 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 335 PDF objects out of 1000 (max. 8388607)
+ 302 compressed objects within 4 object streams
+ 108 named destinations out of 1000 (max. 500000)
+ 113 words of extra memory for PDF output out of 10000 (max. 10000000)
 

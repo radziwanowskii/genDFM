@@ -80,12 +80,12 @@ ty)) (/usr/local/texlive/2022/texmf-dist/tex/latex/inconsolata/t1zi4.fd)
 (/usr/local/texlive/2022/texmf-dist/tex/latex/jknapltx/ursfs.fd) [1{/usr/local/
 texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ts1ptm.fd) [2] [3]
-[4] [5] [6] [7]
-(/usr/local/texlive/2022/texmf-dist/tex/latex/inconsolata/ts1zi4.fd) [8]
+[4] [5] [6] [7] [8] [9]
+(/usr/local/texlive/2022/texmf-dist/tex/latex/inconsolata/ts1zi4.fd) [10]
 No file Rd2.ind.
-[9]
-(/private/var/folders/hq/y01m56113sd_zn02g_p_df300000gn/T/RtmpYc9SFj/Rd2pdf1af2
-1154b0f5/Rd2.aux)
+[11]
+(/private/var/folders/hq/y01m56113sd_zn02g_p_df300000gn/T/RtmpC0YX16/Rd2pdf2747
+54cb76d9/Rd2.aux)
 
 Package rerunfilecheck Warning: File `Rd2.out' has changed.
 (rerunfilecheck)                Rerun to get outlines right
@@ -100,12 +100,12 @@ e/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2022/tex
 mf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2022/texmf-dist/fo
 nts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/
 urw/times/utmri8a.pfb>
-Output written on Rd2.pdf (9 pages, 98610 bytes).
+Output written on Rd2.pdf (11 pages, 105935 bytes).
 Transcript written on Rd2.log.
 This is makeindex, version 2.16 [TeX Live 2022] (kpathsea + Thai support).
-Scanning input file Rd2.idx....done (14 entries accepted, 0 rejected).
-Sorting entries....done (55 comparisons).
-Generating output file Rd2.ind....done (40 lines written, 0 warnings).
+Scanning input file Rd2.idx....done (16 entries accepted, 0 rejected).
+Sorting entries....done (63 comparisons).
+Generating output file Rd2.ind....done (46 lines written, 0 warnings).
 Output written in Rd2.ind.
 Transcript written in Rd2.ilg.
 This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex)
@@ -173,37 +173,37 @@ For additional information on amsmath, use the `?' option.
 Writing index file Rd2.idx
 (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/t1ptm.fd)
 (/usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
-(/private/var/folders/hq/y01m56113sd_zn02g_p_df300000gn/T/RtmpYc9SFj/Rd2pdf1af2
-1154b0f5/Rd2.aux)
+(/private/var/folders/hq/y01m56113sd_zn02g_p_df300000gn/T/RtmpC0YX16/Rd2pdf2747
+54cb76d9/Rd2.aux)
 (/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
 (/usr/local/texlive/2022/texmf-dist/tex/latex/refcount/refcount.sty)
 (/usr/local/texlive/2022/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
 ty))
-(/private/var/folders/hq/y01m56113sd_zn02g_p_df300000gn/T/RtmpYc9SFj/Rd2pdf1af2
-1154b0f5/Rd2.out)
-(/private/var/folders/hq/y01m56113sd_zn02g_p_df300000gn/T/RtmpYc9SFj/Rd2pdf1af2
-1154b0f5/Rd2.out)
+(/private/var/folders/hq/y01m56113sd_zn02g_p_df300000gn/T/RtmpC0YX16/Rd2pdf2747
+54cb76d9/Rd2.out)
+(/private/var/folders/hq/y01m56113sd_zn02g_p_df300000gn/T/RtmpC0YX16/Rd2pdf2747
+54cb76d9/Rd2.out)
 (/usr/local/texlive/2022/texmf-dist/tex/latex/inconsolata/t1zi4.fd)
 (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/t1phv.fd)
-(/private/var/folders/hq/y01m56113sd_zn02g_p_df300000gn/T/RtmpYc9SFj/Rd2pdf1af2
-1154b0f5/Rd2.toc (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
+(/private/var/folders/hq/y01m56113sd_zn02g_p_df300000gn/T/RtmpC0YX16/Rd2pdf2747
+54cb76d9/Rd2.toc (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd)
 (/usr/local/texlive/2022/texmf-dist/tex/latex/jknapltx/ursfs.fd)) [1{/usr/local
 /texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
 (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ts1ptm.fd) [3] [4]
-[5] [6] [7] (/usr/local/texlive/2022/texmf-dist/tex/latex/inconsolata/ts1zi4.fd
-) [8]
-(/private/var/folders/hq/y01m56113sd_zn02g_p_df300000gn/T/RtmpYc9SFj/Rd2pdf1af2
-1154b0f5/Rd2.ind [9]
+[5] [6] [7] [8] [9]
+(/usr/local/texlive/2022/texmf-dist/tex/latex/inconsolata/ts1zi4.fd) [10]
+(/private/var/folders/hq/y01m56113sd_zn02g_p_df300000gn/T/RtmpC0YX16/Rd2pdf2747
+54cb76d9/Rd2.ind [11]
 
 LaTeX Font Warning: Font shape `T1/zi4/m/it' undefined
-(Font)              using `T1/zi4/m/n' instead on input line 26.
+(Font)              using `T1/zi4/m/n' instead on input line 28.
 
-[10])
-(/private/var/folders/hq/y01m56113sd_zn02g_p_df300000gn/T/RtmpYc9SFj/Rd2pdf1af2
-1154b0f5/Rd2.aux)
+[12])
+(/private/var/folders/hq/y01m56113sd_zn02g_p_df300000gn/T/RtmpC0YX16/Rd2pdf2747
+54cb76d9/Rd2.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -222,12 +222,12 @@ texlive/2022/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive
 f-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2022/texmf-dist/fon
 ts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/u
 rw/times/utmri8a.pfb>
-Output written on Rd2.pdf (10 pages, 109646 bytes).
+Output written on Rd2.pdf (12 pages, 116908 bytes).
 Transcript written on Rd2.log.
 This is makeindex, version 2.16 [TeX Live 2022] (kpathsea + Thai support).
-Scanning input file Rd2.idx....done (14 entries accepted, 0 rejected).
-Sorting entries....done (55 comparisons).
-Generating output file Rd2.ind....done (40 lines written, 0 warnings).
+Scanning input file Rd2.idx....done (16 entries accepted, 0 rejected).
+Sorting entries....done (63 comparisons).
+Generating output file Rd2.ind....done (46 lines written, 0 warnings).
 Output written in Rd2.ind.
 Transcript written in Rd2.ilg.
 This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex)
@@ -295,37 +295,37 @@ For additional information on amsmath, use the `?' option.
 Writing index file Rd2.idx
 (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/t1ptm.fd)
 (/usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
-(/private/var/folders/hq/y01m56113sd_zn02g_p_df300000gn/T/RtmpYc9SFj/Rd2pdf1af2
-1154b0f5/Rd2.aux)
+(/private/var/folders/hq/y01m56113sd_zn02g_p_df300000gn/T/RtmpC0YX16/Rd2pdf2747
+54cb76d9/Rd2.aux)
 (/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
 (/usr/local/texlive/2022/texmf-dist/tex/latex/refcount/refcount.sty)
 (/usr/local/texlive/2022/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
 ty))
-(/private/var/folders/hq/y01m56113sd_zn02g_p_df300000gn/T/RtmpYc9SFj/Rd2pdf1af2
-1154b0f5/Rd2.out)
-(/private/var/folders/hq/y01m56113sd_zn02g_p_df300000gn/T/RtmpYc9SFj/Rd2pdf1af2
-1154b0f5/Rd2.out)
+(/private/var/folders/hq/y01m56113sd_zn02g_p_df300000gn/T/RtmpC0YX16/Rd2pdf2747
+54cb76d9/Rd2.out)
+(/private/var/folders/hq/y01m56113sd_zn02g_p_df300000gn/T/RtmpC0YX16/Rd2pdf2747
+54cb76d9/Rd2.out)
 (/usr/local/texlive/2022/texmf-dist/tex/latex/inconsolata/t1zi4.fd)
 (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/t1phv.fd)
-(/private/var/folders/hq/y01m56113sd_zn02g_p_df300000gn/T/RtmpYc9SFj/Rd2pdf1af2
-1154b0f5/Rd2.toc (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
+(/private/var/folders/hq/y01m56113sd_zn02g_p_df300000gn/T/RtmpC0YX16/Rd2pdf2747
+54cb76d9/Rd2.toc (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd)
 (/usr/local/texlive/2022/texmf-dist/tex/latex/jknapltx/ursfs.fd)) [1{/usr/local
 /texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
 (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ts1ptm.fd) [3] [4]
-[5] [6] [7] (/usr/local/texlive/2022/texmf-dist/tex/latex/inconsolata/ts1zi4.fd
-) [8]
-(/private/var/folders/hq/y01m56113sd_zn02g_p_df300000gn/T/RtmpYc9SFj/Rd2pdf1af2
-1154b0f5/Rd2.ind [9]
+[5] [6] [7] [8] [9]
+(/usr/local/texlive/2022/texmf-dist/tex/latex/inconsolata/ts1zi4.fd) [10]
+(/private/var/folders/hq/y01m56113sd_zn02g_p_df300000gn/T/RtmpC0YX16/Rd2pdf2747
+54cb76d9/Rd2.ind [11]
 
 LaTeX Font Warning: Font shape `T1/zi4/m/it' undefined
-(Font)              using `T1/zi4/m/n' instead on input line 26.
+(Font)              using `T1/zi4/m/n' instead on input line 28.
 
-[10])
-(/private/var/folders/hq/y01m56113sd_zn02g_p_df300000gn/T/RtmpYc9SFj/Rd2pdf1af2
-1154b0f5/Rd2.aux)
+[12])
+(/private/var/folders/hq/y01m56113sd_zn02g_p_df300000gn/T/RtmpC0YX16/Rd2pdf2747
+54cb76d9/Rd2.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -339,8 +339,8 @@ texlive/2022/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive
 f-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2022/texmf-dist/fon
 ts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/u
 rw/times/utmri8a.pfb>
-Output written on Rd2.pdf (10 pages, 109979 bytes).
+Output written on Rd2.pdf (12 pages, 117133 bytes).
 Transcript written on Rd2.log.
 Saving output to ‘genDFM-manual.pdf’ ...
 Done
-You may want to clean up by 'rm -Rf /var/folders/hq/y01m56113sd_zn02g_p_df300000gn/T//RtmpYc9SFj/Rd2pdf1af21154b0f5'
+You may want to clean up by 'rm -Rf /var/folders/hq/y01m56113sd_zn02g_p_df300000gn/T//RtmpC0YX16/Rd2pdf274754cb76d9'

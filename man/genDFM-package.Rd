@@ -3,20 +3,24 @@
 \alias{genDFM}
 \docType{package}
 \title{
-  A short title line describing what the package does
+  General package to estimate dynamic factor models
 }
 \description{
-  A more detailed description of what the package does. A length
-  of about one to five lines is recommended.
+genDFM is a general package to estimate dynamic factor models in R.
+We provide a set of functions to estimate the model, plot the components or compute 
+forecasts. We provide a wide range of information criteria for the choice of the
+factors. In addition, the package allows for estimation of Factor Augmented
+Vector Autoregressions and computation of the IRFs. 
+The core of the package is written in C++ and uses the Armadillo library.
 }
 \details{
   This section should provide a more detailed overview of how to use the
   package, including the most important functions.
 }
 \author{
-Your Name, email optional.
+Piotr Radziwanowski, email optional.
 
-Maintainer: Your Name <your@email.com>
+Maintainer: Piotr Radziwanowski <p.radziwanowski@student.maastrichtuniversity.nl>
 }
 \references{
   This optional section can contain literature or other references for

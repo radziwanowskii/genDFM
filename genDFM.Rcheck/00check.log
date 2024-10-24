@@ -17,8 +17,18 @@ Subdirectory ‘genDFM/src’ contains apparent object files/libraries
   RcppExports.o genDFM.so genDFM_functions.o
 Object files/libraries should not be included in a source package.
 * checking if there is a namespace ... OK
-* checking for executable files ... OK
-* checking for hidden files and directories ... OK
+* checking for executable files ... WARNING
+Found the following executable file:
+  .git/objects/74/c586e629cdffe1e43addd767feada11d679eca
+Source packages should not contain undeclared executable files.
+See section ‘Package structure’ in the ‘Writing R Extensions’ manual.
+* checking for hidden files and directories ... NOTE
+Found the following hidden files and directories:
+  .DS_Store
+  data/.DS_Store
+  .git
+These were most likely included in error. See section ‘Package
+structure’ in the ‘Writing R Extensions’ manual.
 * checking for portable file names ... OK
 * checking for sufficient/correct file permissions ... OK
 * checking whether package ‘genDFM’ can be installed ... OK
@@ -28,7 +38,10 @@ Object files/libraries should not be included in a source package.
 * checking package directory ... OK
 * checking DESCRIPTION meta-information ... NOTE
 Checking should be performed on sources prepared by ‘R CMD build’.
-* checking top-level files ... OK
+* checking top-level files ... NOTE
+File
+  LICENSE
+is not mentioned in the DESCRIPTION file.
 * checking for left-over files ... OK
 * checking index information ... OK
 * checking package subdirectories ... WARNING
@@ -87,6 +100,9 @@ to your NAMESPACE file.
 * checking Rd \usage sections ... OK
 * checking Rd contents ... OK
 * checking for unstated dependencies in examples ... OK
+* checking contents of ‘data’ directory ... OK
+* checking data for non-ASCII characters ... OK
+* checking data for ASCII and uncompressed saves ... OK
 * checking line endings in C/C++/Fortran sources/headers ... OK
 * checking compiled code ... WARNING
 File ‘genDFM/libs/genDFM.so’:
@@ -103,4 +119,4 @@ See ‘Writing portable packages’ in the ‘Writing R Extensions’ manual.
 * checking examples ... OK
 * checking PDF version of manual ... OK
 * DONE
-Status: 3 WARNINGs, 3 NOTEs
+Status: 4 WARNINGs, 5 NOTEs
