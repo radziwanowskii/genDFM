@@ -1,4 +1,5 @@
 #' @import Rcpp
+#' @importFrom Rcpp sourceCpp
 #' @useDynLib genDFM, .registration = TRUE
 NULL
 #' Estimate Factor-Augmented Vector Autoregression (FAVAR)
