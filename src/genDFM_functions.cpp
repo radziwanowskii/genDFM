@@ -296,7 +296,7 @@ arma::cube bootstrap_irf_arma_optimal(const arma::mat& boot_data,  const arma::m
       irf_cube_multiplied.slice(i) = irf_cube_direct.slice(i) * loadings;
     }
     return irf_cube_multiplied;
-  } else if(direct == true) {
+  } else{
     return irf_cube_direct;
   }
 }
@@ -409,7 +409,6 @@ arma::cx_mat compute_first_q_eigenvectors(const arma::cx_mat& matrix, int q) {
 arma::cx_cube apply_eigenvectors_to_cube(const arma::cx_cube& cube, int q) {
   // Get the dimensions of the input cube
   int n_rows = cube.n_rows;
-  int n_cols = cube.n_cols;
   int n_slices = cube.n_slices;
   
   // Initialize a cube to store the eigenvectors
@@ -451,8 +450,6 @@ arma::cx_cube apply_transposed_conjugate_to_cube(const arma::cx_cube& cube) {
 //alternative filter estimation giving nxn output
 arma::cx_cube filter_estimate_alternative(const arma::cx_cube& transposed_conjugate_cube, const arma::cx_cube& eigenvectors_cube) {
   // Get the dimensions of the input cube
-  //int n_rows = eigenvectors_cube.n_rows;
-  int n_cols = eigenvectors_cube.n_cols;
   int n_rows = eigenvectors_cube.n_rows;
   int n_slices = eigenvectors_cube.n_slices;
   
@@ -468,7 +465,6 @@ arma::cx_cube filter_estimate_alternative(const arma::cx_cube& transposed_conjug
 }
 arma::cx_cube compute_inverse_dft_for_frequencies(const arma::cx_cube& dft_cube, const arma::vec& frequencies,
                                                   const arma::vec& k) {
-  int n_slices = dft_cube.n_slices;
   int n_rows = dft_cube.n_rows;
   int n_cols = dft_cube.n_cols;
   int n_freqs = frequencies.n_elem;
@@ -581,7 +577,6 @@ std::pair<arma::cx_mat, arma::cx_vec> estimate_row_eigenvectors(const arma::cx_m
 std::pair<arma::cx_cube, arma::cx_mat> apply_row_eigenvectors_to_cube(const arma::cx_cube& cube) {
   // Get the dimensions of the input cube
   int n_rows = cube.n_rows;
-  int n_cols = cube.n_cols;
   int n_slices = cube.n_slices;
   
   // Initialize a cube to store the eigenvectors
@@ -781,7 +776,7 @@ arma::vec compute_sorted_eigenvalues(const arma::mat& matrix,arma::vec& sequence
   for (int f = 0; f < n_freqs; ++f) {
     double freq = frequencies(f);
     // Compute the DFT manually for the specified frequency
-    std::complex<double> exp_term = std::exp(std::complex<double>(0, -2 * M_PI * freq / n_rows));
+   // std::complex<double> exp_term = std::exp(std::complex<double>(0, -2 * M_PI * freq / n_rows));
     for(int i=0; i<n_rows;i++){
       std::complex<double> exp_term = std::exp(std::complex<double>(0, -2 * M_PI * freq * (i+1) / n_rows));
       dft_matrix.col(f) += matrix.row(i).t() * exp_term;
