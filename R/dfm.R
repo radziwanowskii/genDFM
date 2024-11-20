@@ -86,7 +86,6 @@ estimate_DFM <- function(data, r = NULL, q = NULL, q_max = 10, M = NULL, model =
            return(dfms::DFM(data, r, em.method = "BM"))
          }
   )
-  return(result)
 }
 #' Plot Dynamic Factor Model (DFM)
 #'
