@@ -22,5 +22,11 @@ Load the MacroPL dataset and remove the first column containing the dates
 ```r
 data(MacroPL)
 df <- MacroPL[,-1]
+head(df)
 ```
 
+## Estimate a generalized dynamic factor model by Forni et al (2000) and plot the common component
+```r
+dfm <- estimate_DFM(df, model = "fhlr_2000")
+plot(dfm)
+```
