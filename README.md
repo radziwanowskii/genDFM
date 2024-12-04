@@ -9,3 +9,18 @@ You can install the development version of genDFM from GitHub with:
 ```r
 # install.packages("devtools")
 devtools::install_github("radziwanowskii/genDFM")
+```
+
+## Load Package 
+When the package is intalled, you can load the package
+```r
+library(genDFM)
+```
+
+## Load the data
+Load the MacroPL dataset and remove the first column containing the dates
+```r
+data(MacroPL)
+df <- MacroPL[,-1]
+```
+
