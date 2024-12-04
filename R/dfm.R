@@ -34,6 +34,7 @@ estimate_DFM <- function(data, r = NULL, q = NULL, q_max = 10, M = NULL, model =
   if(!is.matrix(data)){
     data <- as.matrix(data)
   }
+  scaled_data <- scale(data)
   switch(model,
          "fhlr_2000" = {
            if(is.null(q)){
@@ -84,7 +85,8 @@ estimate_DFM <- function(data, r = NULL, q = NULL, q_max = 10, M = NULL, model =
              r <- determine_number_of_static_factors(scaled_data,"on",q_max)
            }
            return(dfms::DFM(data, r, em.method = "BM"))
-         }
+         },
+         stop("Invalid model specified")
   )
 }
 #' Plot Dynamic Factor Model (DFM)
