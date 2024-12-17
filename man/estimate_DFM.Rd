@@ -14,11 +14,11 @@ estimate_DFM(
 )
 }
 \arguments{
-\item{data}{A matrix of data to be analyzed.}
+\item{data}{T x N dimensional matrix of data to be analyzed. Data can be in the form of a matrix or data frame.}
 
-\item{r}{Number of static factors. If NULL, it will be determined automatically. Default is NULL.}
+\item{r}{Number of static factors in the model. If NULL, it will be determined automatically.}
 
-\item{q}{Number of dynamic factors. If NULL, it will be determined automatically. Default is NULL.}
+\item{q}{Number of dynamic factors in the model. If NULL, it will be determined automatically.}
 
 \item{q_max}{Maximum number of dynamic factors to consider. Default is 10.}
 
@@ -26,8 +26,8 @@ estimate_DFM(
 
 \item{model}{The model to use for estimation. Must be one of "fhlr_2000", "fhlr_2005", "sw_2002", "doz_2011", "doz_2012", or "BM_2014". Default is "fhlr_2000".
 \itemize{
-  \item \code{"fhlr_2000"}: Forni, Hallin, Lippi, and Reichlin (2000).
-  \item \code{"fhlr_2005"}: Forni, Hallin, Lippi, and Reichlin (2005).
+  \item \code{"fhlr_2000"}: {Generalized Dynamic-Factor Model (Forni, Hallin, Lippi, and Reichlin, 2000).}
+  \item \code{"fhlr_2005"}: {Restricted Generalized Dynamic Factor Model (Forni, Hallin, Lippi, and Reichlin 2005).}
   \item \code{"sw_2002"}: Stock and Watson (2002).
   \item \code{"doz_2011"}: Doz, Giannone, and Reichlin (2011) - relies on the `dfms` package.
   \item \code{"doz_2012"}: Doz, Giannone, and Reichlin (2012) - relies on the `dfms` package.

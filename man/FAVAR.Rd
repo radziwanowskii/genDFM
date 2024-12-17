@@ -4,7 +4,7 @@
 \alias{FAVAR}
 \title{Estimate Factor-Augmented Vector Autoregression (FAVAR)}
 \usage{
-FAVAR(data, r = 3, n_lags = 13, slow_indices = NULL, direct_indices)
+FAVAR(data, r = 3, n_lags = 13, slow_indices = NULL, direct_indices = NULL)
 }
 \arguments{
 \item{data}{A data frame or matrix of data to be analyzed.}
