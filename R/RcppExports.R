@@ -17,6 +17,10 @@ pca_cpp_arma <- function(X, n_components = 0L, center = TRUE, scale = FALSE) {
     .Call(`_genDFM_pca_cpp_arma`, X, n_components, center, scale)
 }
 
+compute_residuals <- function(Y, B, p) {
+    .Call(`_genDFM_compute_residuals`, Y, B, p)
+}
+
 multivariate_multiple_regression_arma <- function(Y, X1, X2) {
     .Call(`_genDFM_multivariate_multiple_regression_arma`, Y, X1, X2)
 }
