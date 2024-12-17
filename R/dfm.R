@@ -2,16 +2,16 @@
 #'
 #' This function estimates a Dynamic Factor Model (DFM) using various methods.
 #'
-#' @param data A matrix of data to be analyzed.
-#' @param r Number of static factors. If NULL, it will be determined automatically. Default is NULL.
-#' @param q Number of dynamic factors. If NULL, it will be determined automatically. Default is NULL.
+#' @param data a T x N dimensional matrix of data to be analyzed. Data can be in the form of a matrix or data frame.
+#' @param r Number of static factors in the model. If NULL, it will be determined automatically. 
+#' @param q Number of dynamic factors in the model. If NULL, it will be determined automatically. 
 #' @param q_max Maximum number of dynamic factors to consider. Default is 10.
 #' @param M Number of lags for the spectral density matrix. If NULL, it will be calculated as (2/3) * length(data[,1])^(1/3). Default is NULL.
 #' @param model The model to use for estimation. Must be one of "fhlr_2000", "fhlr_2005", "sw_2002", "doz_2011", "doz_2012", or "BM_2014". Default is "fhlr_2000".
 #' \itemize{
-#'   \item \code{"fhlr_2000"}: Forni, Hallin, Lippi, and Reichlin (2000).
-#'   \item \code{"fhlr_2005"}: Forni, Hallin, Lippi, and Reichlin (2005).
-#'   \item \code{"sw_2002"}: Stock and Watson (2002).
+#'   \item \code{"fhlr_2000"}: {Generalized Dynamic-Factor Model (Forni, Hallin, Lippi, and Reichlin, 2000).}
+#'   \item \code{"fhlr_2005"}: {Restricted Generalized Dynamic Factor Model (Forni, Hallin, Lippi, and Reichlin 2005).}
+#'   \item \code{"sw_2002"}: {Principal Components method (Stock and Watson, 2002).}
 #'   \item \code{"doz_2011"}: Doz, Giannone, and Reichlin (2011) - relies on the `dfms` package.
 #'   \item \code{"doz_2012"}: Doz, Giannone, and Reichlin (2012) - relies on the `dfms` package.
 #'   \item \code{"BM_2014"}: Banbura and Modugno (2014) - relies on the `dfms` package.
@@ -28,11 +28,17 @@
 #' @name estimate_DFM
 #' @export
 estimate_DFM <- function(data, r = NULL, q = NULL, q_max = 10, M = NULL, model = "fhlr_2000"){
+  if(sum(is.na(data)) > 0){
+    stop("Data contains missing values")
+  }
   if(is.null(M)){
     M <- round((2/3)*length(data[,1])^(1/3))
   }
   if(!is.matrix(data)){
     data <- as.matrix(data)
+  }
+  if (!is.numeric(data)) {
+    stop("Data must be numeric")
   }
   scaled_data <- scale(data)
   switch(model,
@@ -100,16 +106,16 @@ estimate_DFM <- function(data, r = NULL, q = NULL, q_max = 10, M = NULL, model =
 #' @export
 plot.DFM <- function(x, ...) {
   if(class(x) == "generalized_dfm"){
-    plot_series_matrix(x[[2]], "Common Component", ...)
+    plot_series_matrix(x[[2]], ylab = "Common Component", ...)
   }
   else if(class(x) == "restricted_gdfm"){
-    plot_series_matrix(x[[3]], "Factors", ...)
+    plot_series_matrix(x[[3]], ylab = "Factors", ...)
   }
   else if(class(x) == "dfm"){
     plot(x, ...)
   }
   else if(class(x) == "sw_2002"){
-    plot_series_matrix(x[[1]], "Factors", ...)
+    plot_series_matrix(x[[1]], ylab = "Factors", ...)
   }
   else{
     stop("Unknown class type")
@@ -158,4 +164,31 @@ predict.DFM <- function(dfm, h) {
                    }
   )
   return(result)
+}
+
+plot_series_matrix <- function(mat, time = NULL, main_title = "Time Series Plot", ylab = "Value", xlab = "Time") {
+  if (!is.matrix(mat)) {
+    stop("Input must be a matrix.")
+  }
+  
+  # Use default time if not provided
+  if (is.null(time)) {
+    time <- 1:nrow(mat)
+  }
+  
+  # Check if time matches rows
+  if (length(time) != nrow(mat)) {
+    stop("Length of 'time' must match the number of rows in the matrix.")
+  }
+  
+  # Generate Factor labels
+  factor_labels <- paste("Factor", seq_len(ncol(mat)))
+  
+  # Create the plot
+  matplot(time, mat, type = "l", lwd = 2, lty = 1, col = rainbow(ncol(mat)),
+          xlab = xlab, ylab = ylab, main = main_title)
+  
+  # Add a legend with Factor labels
+  legend("topright", legend = factor_labels,
+         col = rainbow(ncol(mat)), lty = 1, lwd = 2)
 }
