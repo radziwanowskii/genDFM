@@ -1,0 +1,55 @@
+# genDFM
+
+genDFM is a general package to estimate dynamic factor models in R. It provides a set of functions to estimate the model, plot the components, and compute forecasts. The package includes a wide range of information criteria for the choice of factors and allows for the estimation of Factor Augmented Vector Autoregressions and computation of IRFs. The core of the package is written in C++ and uses the Armadillo library.
+
+## Installation
+
+You can install the development version of genDFM from GitHub with:
+
+```{r message = FALSE, warning=FALSE}
+# install.packages("devtools")
+devtools::install_github("radziwanowskii/genDFM")
+```
+
+## Load Package 
+When the package is installed, you can load the package
+```{r}
+library(genDFM)
+```
+
+## Show the data
+Load the MacroPL dataset and remove the first column containing the dates
+```{r}
+head(MacroPL)
+```
+
+## Delete the "Date" column and scale the data
+```{r}
+data <- scale(MacroPL[,-1])
+```
+
+## Estimate a number of dynamic factors using the information criteria
+```{r}
+genDFM::determine_number_of_dynamic_factors(data, method = "av", max_factors = 10)
+
+```
+
+## Estimate a dynamic factor model of Forni et. al. (2000) and plot the common component
+```{r}
+dfm <- genDFM::estimate_DFM(data, r = 3, model = "fhlr_2000")
+plot(dfm)
+```
+
+## Estimate a factor-augmented vector autoregression
+```{r}
+favar <- genDFM::FAVAR(data, r = 3, n_lags = 13, slow_indices = c(1:22),
+                       direct_indices = c('Ref',"Lom"))
+```
+
+## Compute impulse response functions
+```{r}
+irf <- genDFM::favar_IRF(favar,shock_variable = "Ref", response_variable = "ERE",
+                         n_ahead = 49, n_boot = 500, cumulative = FALSE, 
+                         shock = "unit", plot = TRUE, alpha = 0.05)
+```
+
