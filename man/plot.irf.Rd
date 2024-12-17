@@ -9,7 +9,7 @@
 \arguments{
 \item{x}{An object of class "irf".}
 
-\item{alpha}{Significance level for the confidence intervals. Default is 0.05.}
+\item{alpha}{Significance level for the confidence intervals in the plot. Default is 0.05.}
 }
 \value{
 A plot of the IRFs with confidence intervals.

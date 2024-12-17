@@ -29,17 +29,17 @@ favar_IRF(
 
 \item{cumulative}{Whether to compute cumulative IRFs. Default is FALSE.}
 
-\item{shock}{The type of shock ("unit" or "sd"). Default is "unit".}
+\item{shock}{The type of shock used in the model. "unit" implements a one-unit shock to the schock variable, "sd" implements a shock of one standard deviation. Default is "unit".}
 
 \item{plot}{Whether to plot the IRF. Default is TRUE.}
 
-\item{alpha}{Significance level for the confidence intervals. Default is 0.05.}
+\item{alpha}{Significance level for the confidence intervals in the plot. Default is 0.05.}
 }
 \value{
 A list containing the IRF and bootstrapped IRF:
 \itemize{
   \item \code{irf}: The impulse response function.
-  \item \code{boot}: The bootstrapped impulse response function.
+  \item \code{boot}: The bootstrapped values of the impulse response function.
 }
 }
 \description{

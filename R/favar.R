@@ -158,7 +158,7 @@ n_ahead = 49, n_boot = 500, cumulative = FALSE, shock = "unit", plot = TRUE, alp
   }
   # Return the IRF and the bootstrapped IRF
 irf.out <- list(irf = irf_result, boot = boot_result)
-class(irf.out) <- "IRF"
+class(irf.out) <- "irf"
 
 if(plot == TRUE){
     #plot.irf(irf_result,boot_result,alpha)

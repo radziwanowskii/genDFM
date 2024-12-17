@@ -14,7 +14,7 @@ estimate_DFM(
 )
 }
 \arguments{
-\item{data}{T x N dimensional matrix of data to be analyzed. Data can be in the form of a matrix or data frame.}
+\item{data}{a T x N dimensional matrix of data to be analyzed. Data can be in the form of a matrix or data frame.}
 
 \item{r}{Number of static factors in the model. If NULL, it will be determined automatically.}
 
@@ -28,7 +28,7 @@ estimate_DFM(
 \itemize{
   \item \code{"fhlr_2000"}: {Generalized Dynamic-Factor Model (Forni, Hallin, Lippi, and Reichlin, 2000).}
   \item \code{"fhlr_2005"}: {Restricted Generalized Dynamic Factor Model (Forni, Hallin, Lippi, and Reichlin 2005).}
-  \item \code{"sw_2002"}: Stock and Watson (2002).
+  \item \code{"sw_2002"}: {Principal Components method (Stock and Watson, 2002).}
   \item \code{"doz_2011"}: Doz, Giannone, and Reichlin (2011) - relies on the `dfms` package.
   \item \code{"doz_2012"}: Doz, Giannone, and Reichlin (2012) - relies on the `dfms` package.
   \item \code{"BM_2014"}: Banbura and Modugno (2014) - relies on the `dfms` package.

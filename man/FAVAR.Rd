@@ -13,7 +13,7 @@ FAVAR(data, r = 3, n_lags = 13, slow_indices = NULL, direct_indices = NULL)
 
 \item{n_lags}{Number of lags in the VAR model. Default is 13.}
 
-\item{slow_indices}{Indices of slow-moving variables. Default is NULL.}
+\item{slow_indices}{Indices of slow-moving variables.}
 
 \item{direct_indices}{Indices of directly observed variables.}
 }

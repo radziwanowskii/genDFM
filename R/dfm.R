@@ -95,75 +95,60 @@ estimate_DFM <- function(data, r = NULL, q = NULL, q_max = 10, M = NULL, model =
          stop("Invalid model specified")
   )
 }
-#' Plot Dynamic Factor Model (DFM)
+#' Plot Restricted Generalized Dynamic Factor Model (restricted_gdfm)
 #'
-#' This function plots the components of a Dynamic Factor Model (DFM) based on its class type.
+#' This function plots the components of a Restricted Generalized Dynamic Factor Model (restricted_gdfm).
 #'
-#' @param x An object of class "generalized_dfm", "restricted_gdfm", "dfm", or "sw_2002".
-#' @param ... Additional arguments passed to the plot function.
+#' @param x An object of class "restricted_gdfm".
+#' @param main Title of the plot. Default is NULL.
+#' @param xlab Label for the x-axis. Default is "Time".
+#' @param ylab Label for the y-axis. Default is "Factors".
 #' @return A plot of the DFM components.
-#' @name plot.DFM
+#' @name plot.restricted_gdfm
 #' @export
-plot.DFM <- function(x, ...) {
-  if(class(x) == "generalized_dfm"){
-    plot_series_matrix(x[[2]], ylab = "Common Component", ...)
-  }
-  else if(class(x) == "restricted_gdfm"){
-    plot_series_matrix(x[[3]], ylab = "Factors", ...)
-  }
-  else if(class(x) == "dfm"){
-    plot(x, ...)
-  }
-  else if(class(x) == "sw_2002"){
-    plot_series_matrix(x[[1]], ylab = "Factors", ...)
-  }
-  else{
-    stop("Unknown class type")
-  }
+plot.restricted_gdfm <- function(x, main = NULL, xlab = "Time", ylab = "Factors") {
+  plot_series_matrix(x[[3]], main = main, xlab = xlab, ylab = ylab)
+}
+#' Plot Generalized Dynamic Factor Model (generalized_dfm)
+#'
+#' This function plots the components of a Generalized Dynamic Factor Model (generalized_dfm).
+#'
+#' @param x An object of class "generalized_dfm".
+#' @param main Title of the plot. Default is NULL.
+#' @param xlab Label for the x-axis. Default is "Time".
+#' @param ylab Label for the y-axis. Default is "Common Component".
+#' @return A plot of the DFM components.
+#' @name plot.generalized_dfm
+#' @export
+plot.generalized_dfm <- function(x, main = NULL, xlab = "Time", ylab = "Common Component") {
+  plot_series_matrix(x[[2]], main = main, xlab = xlab, ylab = ylab)
 }
 
-#' Predict Dynamic Factor Model (DFM)
+
+
+
+#' Predict Restricted Generalized Dynamic Factor Model (restricted_gdfm)
 #'
-#' This function makes predictions based on a Dynamic Factor Model (DFM) object.
+#' This function makes predictions based on a Restricted Generalized Dynamic Factor Model (restricted_gdfm) object.
 #'
-#' @param dfm An object of class "generalized_dfm", "restricted_gdfm", "dfm", or "sw_2002".
+#' @param object An object of class "restricted_gdfm".
 #' @param h The forecast horizon.
+#' @param ... Additional arguments (not used).
 #' @return The forecasted values or a message indicating that prediction is not supported for the given class type.
-#' @name predict.DFM
+#' @name predict.restricted_gdfm
 #' @export
-predict.DFM <- function(dfm, h) {
-  class_type <- class(dfm)
-  
-  result <- switch(class_type,
-                   "generalized_dfm" = {
-                     print("No prediction for generalized_dfm")
-                     NULL
-                   },
-                   "restricted_gdfm" = {
-                     M <- dfm[[5]]
-                     if(h > M){
-                       print("Only forecasts up to Max lag M are allowed")
-                       NULL
-                     } else {
-                       cov_cube <- dfm[[1]]
-                       Z <- dfm[[2]]
-                       original_data <- dfm[[6]]
-                       x_T <- original_data[nrow(original_data),]
-                       forecast_projection(cov_cube[,,M+1], cov_cube[,,M+1+h], Z, x_T)
-                     }
-                   },
-                   "dfm" = {
-                     predict(dfm, n.ahead = h)
-                   },
-                   "sw_2002" = {
-                     print("Currently we support no prediction for sw_2002")
-                     NULL
-                   },
-                   {
-                     stop("Unknown class type")
-                   }
-  )
-  return(result)
+predict.restricted_gdfm <- function(object, h, ...) {
+  M <- object[[5]]
+  if (h > M) {
+    print("Only forecasts up to Max lag M are allowed")
+    return(NULL)
+  } else {
+    cov_cube <- object[[1]]
+    Z <- object[[2]]
+    original_data <- object[[6]]
+    x_T <- original_data[nrow(original_data), ]
+    return(forecast_projection(cov_cube[,,M+1], cov_cube[,,M+1+h], Z, x_T))
+  }
 }
 
 plot_series_matrix <- function(mat, time = NULL, main_title = "Time Series Plot", ylab = "Value", xlab = "Time") {
