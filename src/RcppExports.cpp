@@ -67,6 +67,19 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// compute_residuals
+arma::mat compute_residuals(const arma::mat& Y, const arma::mat& B, int p);
+RcppExport SEXP _genDFM_compute_residuals(SEXP YSEXP, SEXP BSEXP, SEXP pSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const arma::mat& >::type Y(YSEXP);
+    Rcpp::traits::input_parameter< const arma::mat& >::type B(BSEXP);
+    Rcpp::traits::input_parameter< int >::type p(pSEXP);
+    rcpp_result_gen = Rcpp::wrap(compute_residuals(Y, B, p));
+    return rcpp_result_gen;
+END_RCPP
+}
 // multivariate_multiple_regression_arma
 arma::mat multivariate_multiple_regression_arma(const arma::mat& Y, const arma::mat& X1, const arma::mat& X2);
 RcppExport SEXP _genDFM_multivariate_multiple_regression_arma(SEXP YSEXP, SEXP X1SEXP, SEXP X2SEXP) {
@@ -256,6 +269,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"_genDFM_compute_irf_with_constant_vertical", (DL_FUNC) &_genDFM_compute_irf_with_constant_vertical, 4},
     {"_genDFM_compute_all_irf", (DL_FUNC) &_genDFM_compute_all_irf, 5},
     {"_genDFM_pca_cpp_arma", (DL_FUNC) &_genDFM_pca_cpp_arma, 4},
+    {"_genDFM_compute_residuals", (DL_FUNC) &_genDFM_compute_residuals, 3},
     {"_genDFM_multivariate_multiple_regression_arma", (DL_FUNC) &_genDFM_multivariate_multiple_regression_arma, 3},
     {"_genDFM_favar_prep_arma", (DL_FUNC) &_genDFM_favar_prep_arma, 5},
     {"_genDFM_bootstrap_irf_arma_for_fyff", (DL_FUNC) &_genDFM_bootstrap_irf_arma_for_fyff, 8},
