@@ -158,6 +158,7 @@ arma::mat VAR_estimate_arma(const arma::mat& Y, int p) {
   
   return B;
 }
+// [[Rcpp::export]]
 arma::mat compute_residuals(const arma::mat& Y, const arma::mat& B, int p) {
   int n_obs = Y.n_rows;
   int n_vars = Y.n_cols;
@@ -860,12 +861,19 @@ int Onatski_2010_test(const arma::mat& data,int rmax) {
     arma::vec subset_sorted_eigenvalues = sorted_eigenvalues(arma::span(0, rmax));
     // Create vector of differences
     arma::vec diff_eigenvalues = subset_sorted_eigenvalues(arma::span(0, rmax-1)) - subset_sorted_eigenvalues(arma::span(1, rmax));
-    
+
     //subset eigenvalues greater than delta
     //arma::vec subset_eigenvalues_delta = subset_eigenvalues.elem(find(subset_eigenvalues > delta));
     arma::uvec indices = find(diff_eigenvalues > delta);
-    // Subset r_hat and set j
-    int r_hat = arma::max(indices) + 1;
+    int r_hat = 0;
+    if (indices.is_empty()) {
+      r_hat = 0;
+    }
+    else{
+     // Subset r_hat 
+      r_hat = arma::max(indices) + 1;
+    }
+    //set j
     int new_j = r_hat + 1;
     
     if(new_j == j){
