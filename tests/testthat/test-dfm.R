@@ -76,4 +76,8 @@ test_that("dimensions work",{
   expect_error(estimate_DFM(MacroPL[,2],model = "BM_2014"))
 })
 
+test_that("predict_dfm",{
+  dfm <- estimate_DFM(scale(MacroPL[,-1]),model = 'fhlr_2005')
+  expect_no_error(predict.DFM(dfm,3))
+})
 
