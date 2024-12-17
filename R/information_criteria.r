@@ -65,23 +65,32 @@ onatski_2009_test_r <- function(data, omega0 = NULL, sequence = NULL, k0 = 1, k1
 #' @name determine_number_of_dynamic_factors
 #' @export
 determine_number_of_dynamic_factors <- function(data, method = "av", max_factors = 10) {
-    method <- match.arg(method, choices = c("on", "av", "hl"))
+  
+  if(sum(is.na(data)) > 0){
+    stop("Data contains missing values")
+  }
+  if(!is.matrix(data)){
+    data <- as.matrix(data)
+  }
+  if (!is.numeric(data)) {
+    stop("Data must be numeric")
+  }
     
-    result <- switch(method,
+    switch(method,
                      "on" = {
                          cat("Number of factors determined by the Onatski (2009) test\n")
-                         onatski_2009_test_r(data, k0 = 1, k1 = max_factors, test_size = 5)
+                         return(onatski_2009_test_r(data, k0 = 1, k1 = max_factors, test_size = 5))
                      },
                      "av" = {
                          cat("Number of factors determined by the Avarucci_et_al_2022 test\n")
-                         fnets_ic_wrapper(fnets::factor.number(data, fm.restricted = FALSE, method = "er", q.max = max_factors))
+                         return(fnets_ic_wrapper(fnets::factor.number(data, fm.restricted = FALSE, method = "er", q.max = max_factors)))
                      },
                      "hl" = {
                          cat("Number of factors determined by the Hallin & Liska (2007) test\n")
-                         fnets_ic_wrapper(fnets::factor.number(data, fm.restricted = FALSE, method = "ic", q.max = max_factors))
-                     }
+                         return(fnets_ic_wrapper(fnets::factor.number(data, fm.restricted = FALSE, method = "ic", q.max = max_factors)))
+                     },
+                      stop("Invalid method")
     )
-    return(result)
 }
 
 #' Determine Number of Static Factors
@@ -110,27 +119,34 @@ determine_number_of_dynamic_factors <- function(data, method = "av", max_factors
 #' @name determine_number_of_static_factors
 #' @export
 determine_number_of_static_factors <- function(data, method = "on", max_factors = 10) {
-    method <- match.arg(method, choices = c("on", "al", "ah", "bn"))
+  if(sum(is.na(data)) > 0){
+    stop("Data contains missing values")
+  }
+  if(!is.matrix(data)){
+    data <- as.matrix(data)
+  }
+  if (!is.numeric(data)) {
+    stop("Data must be numeric")
+  }
     
-    result <- switch(method,
+    switch(method,
                      "on" = {
                          cat("Number of factors determined by the Onatski (2010) test\n")
-                         Onatski_2010_test(data, max_factors)
+                         return(Onatski_2010_test(data, max_factors))
                      },
                      "al" = {
                          cat("Number of factors determined by the modified Alessi, Barigozzi and Capasso (2010)\n")
-                         fnets_ic_wrapper(fnets::factor.number(data, fm.restricted = TRUE, method = "ic", q.max = max_factors))
+                         return(fnets_ic_wrapper(fnets::factor.number(data, fm.restricted = TRUE, method = "ic", q.max = max_factors)))
                      },
                      "ah" = {
                          cat("Number of factors determined by the modified Ahn and Horenstein (2013)\n")
-                         fnets_ic_wrapper(fnets::factor.number(data, fm.restricted = TRUE, method = "er", q.max = max_factors))
+                         return(fnets_ic_wrapper(fnets::factor.number(data, fm.restricted = TRUE, method = "er", q.max = max_factors)))
                      },
                      "bn" = {
                          cat("Number of factors determined by the modified Bai and Ng (2002)\n")
-                         dfms_ic_wrapper(dfms::ICr(data, max_factors))
-                     }
-    )
-    return(result)
+                         return(dfms_ic_wrapper(dfms::ICr(data, max_factors)))
+                     },
+                     stop("Invalid method"))
 }
 
 #' Wrap FNets IC Results
